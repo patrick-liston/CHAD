@@ -22,7 +22,7 @@ CHAD: A Scalable Turn-Based Simulator for Complex Heterogeneous Agent Dynamics i
                                                                                                                                                                                                            
  ---                                                                                                                                                                                                       
       
- ---           
+       
   ## Simulation Preview
 
 The animation below compares CHAD's simulated market dynamics with the corresponding empirical market data. It provides a qualitative illustration of the model's ability to reproduce realistic market behaviour through purely endogenous agent interactions.
@@ -89,7 +89,7 @@ The animation below compares CHAD's simulated market dynamics with the correspon
  *   `Agent_functions.jl`: Agent definitions and behavioral archetypes.                                                                                                                                    
  *   `/results/`: Output logs and calibration data.                                                                                                                                                        
                                                                                                                                                                                                            
- ---                                                                                                                                                                                                 
+                                                                                                                                                                                              
 
 
 
@@ -108,7 +108,7 @@ The animation below compares CHAD's simulated market dynamics with the correspon
 
 
 
----
+
 
 ## Citation
 
