@@ -8,17 +8,7 @@ CHAD: A Scalable Turn-Based Simulator for Complex Heterogeneous Agent Dynamics i
  **pre-scheduled, turn-based execution architecture**. This ensures deterministic behavior and enables the simulation to scale to millions of agents with near-linear performance.                         
                                                                                                                                                                                                            
  CHAD generates realistic market dynamics—reproducing key **stylized facts**—strictly through endogenous agent interactions, without the need for exogenous price guidance or historical replay.           
-                                                                                                                                                                                                           
- ---                                                                                                                                                                                                       
-                                                                                                                                                                                                           
- ## ⚠️ Important Note: Functional Swap of Orders                                                                                                                                                           
- **Please be aware:** In the current implementation, the logical handling of buy and sell orders is functionally swapped.                                                                                  
- *   Code referring to `asks` may be processing buy order functions.                                                                                                                                       
- *   Code referring to `bids` may be processing sell order functions.                                                                                                                                      
- This is a known structural quirk in the codebase. If you are extending the order-matching engine or performing manual order submission, **you must account for this inversion.** A refactor to align the  
- logic with standard market conventions is recommended for future development.                                                                                                                             
-                                                                                                                                                                                                           
- ---                                                                                                                                                                                                       
+                                                                                                                                                                                                                                                                                                                                                                                                      
                                                                                                                                                                                                            
  ## Core Contributions                                                                                                                                                                                     
                                                                                                                                                                                                            
@@ -31,6 +21,17 @@ CHAD: A Scalable Turn-Based Simulator for Complex Heterogeneous Agent Dynamics i
  over 1,000,000 agents.                                                                                                                                                                                    
                                                                                                                                                                                                            
  ---                                                                                                                                                                                                       
+      
+ ---           
+  ## Simulation Preview
+
+The animation below compares CHAD's simulated market dynamics with the corresponding empirical market data. It provides a qualitative illustration of the model's ability to reproduce realistic market behaviour through purely endogenous agent interactions.
+
+<p align="center">
+  <img src="Simulation_Animation_Comparison.gif" alt="Comparison of CHAD simulation and empirical market data" width="900"/>
+</p>                                                                                                                                                                                                     
+        
+ ---                                                                                                                                                                                                                    
                                                                                                                                                                                                            
  ## System Architecture                                                                                                                                                                                    
                                                                                                                                                                                                            
@@ -88,5 +89,44 @@ CHAD: A Scalable Turn-Based Simulator for Complex Heterogeneous Agent Dynamics i
  *   `Agent_functions.jl`: Agent definitions and behavioral archetypes.                                                                                                                                    
  *   `/results/`: Output logs and calibration data.                                                                                                                                                        
                                                                                                                                                                                                            
+ ---                                                                                                                                                                                                 
+
+
+
+
+      
  ---                                                                                                                                                                                                       
+                                                                                                                                                                                                           
+ ## ⚠️ Important Note: Functional Swap of Orders                                                                                                                                                           
+ **Please be aware:** In the current implementation, the logical handling of buy and sell orders is functionally swapped.                                                                                  
+ *   Code referring to `asks` may be processing buy order functions.                                                                                                                                       
+ *   Code referring to `bids` may be processing sell order functions.                                                                                                                                      
+ This is a known structural quirk in the codebase. If you are extending the order-matching engine or performing manual order submission, **you must account for this inversion.** A refactor to align the  
+ logic with standard market conventions is recommended for future development.                                                                                                                             
+                                                                                                                                                                                                           
+ ---      
+
+
+
+---
+
+## Citation
+
+If you use CHAD in academic research, publications, or derivative software, please cite:
+
+```bibtex
+@article{listonchad,
+  title={CHAD: A Scalable Turn-Based Simulator for Complex Heterogeneous Agent Dynamics},
+  author={Liston, Patrick and Lensky, Artem and Gretton, Charles}
+}
+```
+
+Citing this work helps support continued development of the simulator and allows others to locate the original methodology.
+---
+ 
  GitHub Repository: https://github.com/patrick-liston/CHAD        
+
+
+
+
+
